@@ -86,11 +86,14 @@ public class mikan extends CustomPlayer{
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
         for(int x = 0; x<5; x++) {
-            retVal.add("kiiwata打击");
+            retVal.add("mi_strike");
         }
-        // for(int x = 0; x<4; x++) {
-        //     retVal.add("defend_mi");
-        //}
+         for(int x = 0; x<4; x++) {
+             retVal.add("mi_defend");
+        }
+        for(int x = 0; x<1; x++) {
+            retVal.add("mi_hammerstrike");
+        }
         return retVal;
     }
 

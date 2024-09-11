@@ -5,6 +5,7 @@ import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import cards.defend_mi;
+import cards.hammerstrike_mi;
 import cards.strike_mi;
 import characters.mikan;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -43,9 +44,9 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
     // 攻击牌的背景（大尺寸）
     private static final String BG_ATTACK_1024 = "mikanresources/images/1024/bg_attack.png";
     // 能力牌的背景（大尺寸）
-    private static final String BG_POWER_1024 = "mikanresources/images/bg_power.png";
+    private static final String BG_POWER_1024 = "mikanresources/images/1024/bg_power.png";
     // 技能牌的背景（大尺寸）
-    private static final String BG_SKILL_1024 = "mikanresources/images/bg_skill.png";
+    private static final String BG_SKILL_1024 = "mikanresources/images/1024/bg_skill.png";
     // 在卡牌预览界面的能量图标
     private static final String BIG_ORB = "mikanresources/images/character_img/card_orb.png";
     // 小尺寸的能量图标（战斗中，牌堆预览）
@@ -68,6 +69,7 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
     public void receiveEditCards() {
         BaseMod.addCard(new strike_mi());
         BaseMod.addCard(new defend_mi());
+        BaseMod.addCard(new hammerstrike_mi());
     }
 
     public void receiveEditStrings() {
