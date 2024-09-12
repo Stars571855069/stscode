@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
 
+import static characters.mikan.PlayerColorEnum.EXAMPLE_GREEN;
+
 public class defend_mi extends CustomCard
 {
 
@@ -23,7 +25,8 @@ public class defend_mi extends CustomCard
     private static final String IMG_PATH = "mikanresources/images/cards_img/mi_defend.png";
     private static final int COST = 1;
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardColor COLOR = CardColor.COLORLESS;
+    private static final CardColor COLOR = EXAMPLE_GREEN;
+    //private static final CardColor COLOR = CardColor.COLORLESS;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int UPGRADE_PLUS_BLOCK = 3;

@@ -16,17 +16,19 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
+import static characters.mikan.PlayerColorEnum.EXAMPLE_GREEN;
+
 public class hammerstrike_mi extends CustomCard{
 
     public static final String ID = "mi_hammerstrike";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-
+    private static final CardColor COLOR = EXAMPLE_GREEN;
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final String IMG_PATH = "mikanresources/images/cards_img/mi_hammerstrike.png";
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardColor COLOR = CardColor.COLORLESS;
+    //private static final CardColor COLOR = CardColor.COLORLESS;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int UPGRADE_Base_Cost = 0;

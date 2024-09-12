@@ -13,8 +13,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
 
-public class strike_mi extends CustomCard{
+import static characters.mikan.PlayerColorEnum.EXAMPLE_GREEN;
 
+public class strike_mi extends CustomCard{
+    private static final CardColor COLOR = EXAMPLE_GREEN;
     public static final String ID = "mi_strike";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -23,7 +25,7 @@ public class strike_mi extends CustomCard{
     private static final String IMG_PATH = "mikanresources/images/cards_img/mi_strike.png";
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardColor COLOR = CardColor.COLORLESS;
+    //private static final CardColor COLOR = CardColor.COLORLESS;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int UPGRADE_PLUS_DMG = 4;

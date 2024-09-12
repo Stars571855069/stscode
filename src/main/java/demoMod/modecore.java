@@ -1,5 +1,6 @@
 package demoMod;
 
+import basemod.AutoAdd;
 import basemod.helpers.RelicType;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
@@ -40,7 +41,7 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
     // 技能牌的背景（小尺寸）
     private static final String BG_SKILL_512 = "mikanresources/images/512/bg_skill_512.png";
     // 在卡牌和遗物描述中的能量图标
-    private static final String SMALL_ORB = "mikanresources/images/512/small_orb.png";
+    private static final String SMALL_ORB = "mikanresources/images/character_img/small_orb.png";
     // 攻击牌的背景（大尺寸）
     private static final String BG_ATTACK_1024 = "mikanresources/images/1024/bg_attack.png";
     // 能力牌的背景（大尺寸）
@@ -67,9 +68,11 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
 
     @Override
     public void receiveEditCards() {
-        BaseMod.addCard(new strike_mi());
-        BaseMod.addCard(new defend_mi());
-        BaseMod.addCard(new hammerstrike_mi());
+        //BaseMod.addCard(new strike_mi());
+        new AutoAdd("MikanMod") // 这里填写你在ModTheSpire.json中写的modid
+                .packageFilter(strike_mi.class) // 寻找所有和此类同一个包及内部包的类（本例子是所有卡牌）
+                .setDefaultSeen(true) // 是否将卡牌标为可见
+                .cards(); // 开始批量添加卡牌
     }
 
     public void receiveEditStrings() {

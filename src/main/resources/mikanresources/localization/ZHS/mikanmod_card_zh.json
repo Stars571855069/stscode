@@ -9,6 +9,6 @@
   },
   "mi_hammerstrike": {
     "NAME": "aluna锤击",
-    "DESCRIPTION": "造成 !D! 点伤害，并施加*2层 易伤。"
+    "DESCRIPTION": "造成 !D! 点伤害，给予2层 易伤 。"
   }
 }
