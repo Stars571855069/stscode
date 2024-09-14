@@ -28,7 +28,7 @@ public class darkbarrier_mi extends CustomCard
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
     private static final int COST = 2;
     private static final int UPGRADE_PLUS_BLOCK = 4;
-    private static final int BLOCK_AMT = 12;
+    private static final int BLOCK_AMT = 16;
     private static final int HP_LOST_AMOUNT = 2;
     //=================================================
 

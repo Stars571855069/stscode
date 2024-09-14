@@ -25,11 +25,11 @@ public class brutalstrike_mi extends CustomCard{
     private static final CardColor COLOR = EXAMPLE_GREEN;
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_hammerstrike.png";
+    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_brutalstrike.png";
 
     private static final CardType TYPE = CardType.ATTACK;
     private static final int COST = 1;
-    private static final CardRarity RARITY = CardRarity.CURSE;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int UPGRADE_DAMAGE = 5;
     private static final int ATTACK_DMG = 9;

@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import pathes.ThmodClassEnum;
 import relics.mi_darkenergy;
@@ -53,7 +54,7 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
     // 小尺寸的能量图标（战斗中，牌堆预览）
     private static final String ENEYGY_ORB = "mikanresources/images/character_img/cost_orb.png";
 
-    public static final Color MY_COLOR = new Color(252.0F / 255.0F, 145.0F / 255.0F, 19.0F / 255.0F, 1.0F);
+    public static final Color MY_COLOR = new Color(150.0F / 255.0F, 220.0F / 255.0F, 56.0F / 255.0F, 1.0F);
 
 
 
@@ -85,6 +86,7 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
         BaseMod.loadCustomStringsFile(CardStrings.class, "mikanresources/localization/" + lang + "/mikanmod_card_zh.json");
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "mikanresources/localization/" + lang + "/mikanmod_characters_zh.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "mikanresources/localization/" + lang + "/mikanmod_relics_zh.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, "mikanresources/localization/" + lang + "/mikanmod_power_zh.json");
     }
 
     @Override
