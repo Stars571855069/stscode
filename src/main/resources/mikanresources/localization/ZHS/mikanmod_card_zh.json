@@ -10,5 +10,13 @@
   "mi_hammerstrike": {
     "NAME": "aluna锤击",
     "DESCRIPTION": "造成 !D! 点伤害，给予2层 易伤 。"
+  },
+  "mi_darkbarrier": {
+    "NAME": "鲜血屏障",
+    "DESCRIPTION": "失去 !M! 点生命值，获得 !B! 点 格挡 。"
+  },
+  "mi_brutalstrike": {
+    "NAME": "残虐打击",
+    "DESCRIPTION": "造成 !D! 点伤害，如果目标有 虚弱 ，则获得 [E] [E] 。"
   }
 }
