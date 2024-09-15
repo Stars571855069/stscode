@@ -38,6 +38,7 @@ public class defend_mi extends CustomCard
         //添加基础防御标签和将格挡设为5
         this.tags.add(BaseModCardTags.BASIC_DEFEND);
         this.baseBlock = BLOCK_AMT;
+        this.block=this.baseBlock;
     }
 
     @Override

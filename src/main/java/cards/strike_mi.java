@@ -37,6 +37,7 @@ public class strike_mi extends CustomCard{
         //添加基础攻击标签和将伤害设为6
         this.tags.add(BaseModCardTags.BASIC_STRIKE);
         this.baseDamage = ATTACK_DMG;
+        this.damage=this.baseDamage;
     }
 
     @Override

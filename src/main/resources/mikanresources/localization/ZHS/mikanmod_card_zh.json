@@ -29,7 +29,7 @@
   },
   "mi_innerpower": {
     "NAME": "内在潜能",
-    "DESCRIPTION": "每回合抽到的第1张牌的耗能在本回合内降低 *1 点。"
+    "DESCRIPTION": "每回合抽到的第1张牌在本回合内的耗能降低 *1 点。"
   },
   "mi_press_the_attack": {
     "NAME": "强攻",

@@ -39,6 +39,7 @@ public class darkbarrier_mi extends CustomCard
         //this.tags.add(BaseModCardTags.BASIC_DEFEND);
         this.baseBlock = BLOCK_AMT;
         this.baseMagicNumber = HP_LOST_AMOUNT;
+        this.block=this.baseBlock;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

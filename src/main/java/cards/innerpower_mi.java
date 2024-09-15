@@ -29,11 +29,11 @@ public class innerpower_mi extends CustomCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    //private static final int DEX_GAIN = 1;
-    //private static final int DEX_GAIN_UPGRADE = 1;
 
+    private static final int AMOUNT = 1;
     public innerpower_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.magicNumber = this.baseMagicNumber = AMOUNT;
     }
 
     @Override

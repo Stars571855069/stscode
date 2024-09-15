@@ -19,7 +19,7 @@ public class brutalstrike_action extends AbstractGameAction {
         if (this.target != null && this.target.hasPower("Weakened")) {
             this.addToTop(new GainEnergyAction(2));
         }
-        addToTop((AbstractGameAction)new DamageAction(this.target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        //addToTop((AbstractGameAction)new DamageAction(this.target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.isDone = true;
     }
 }

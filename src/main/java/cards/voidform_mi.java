@@ -39,13 +39,12 @@ public class voidform_mi extends CustomCard {
     public voidform_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = DEX_GAIN;
+        this.magicNumber=this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //使用卡牌时触发的动作
-        System.out.print("use power");
-        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new voidform_power((AbstractCreature)p, this.baseMagicNumber), this.baseMagicNumber));
+        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new voidform_power((AbstractCreature)p, this.magicNumber), this.magicNumber));
     }
     @Override
     public AbstractCard makeCopy() {

@@ -41,6 +41,7 @@ public class press_the_attack_mi extends CustomCard
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         //添加基础防御标签和将格挡设为5
         this.baseMagicNumber = ENERGY_REFUND;
+
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
