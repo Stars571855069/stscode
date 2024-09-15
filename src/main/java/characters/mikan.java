@@ -17,15 +17,12 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import pathes.ThmodClassEnum;
 import demoMod.modecore;
 
 import java.util.ArrayList;
 
 import static characters.mikan.PlayerColorEnum.EXAMPLE_GREEN;
 import static characters.mikan.PlayerColorEnum.MY_CHARACTER;
-//import static characters.mikan.PlayerLibraryEnum.MY_CHARACTER;
-//import static characters.mikan.PlayerLibraryEnum.EXAMPLE_GREEN;
 
 public class mikan extends CustomPlayer{
     // 火堆的人物立绘（行动前）

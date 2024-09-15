@@ -26,5 +26,9 @@
   "mi_core_recharge": {
     "NAME": "核心重载",
     "DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。"
+  },
+  "mi_innerpower": {
+    "NAME": "内在潜能",
+    "DESCRIPTION": "每回合抽到的第1张牌的耗能降低 *1 点。"
   }
 }
