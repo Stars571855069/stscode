@@ -97,7 +97,7 @@ public class mikan extends CustomPlayer{
     // 初始遗物的ID，可以先写个原版遗物凑数
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add("mi_darkenergy");
+        retVal.add("mi_ghost_vessel");
         return retVal;
     }
 

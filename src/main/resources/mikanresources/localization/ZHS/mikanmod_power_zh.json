@@ -1,24 +1,31 @@
 {
-  "void_form": {
+  "mi_void_form": {
     "NAME": "虚空形态",
     "DESCRIPTIONS": [
     "在你的回合开始时，获得 #b",
     " 点 敏捷 。"
   ]
   },
-  "core_recharge": {
+  "mi_core_recharge": {
     "NAME": "核心重载",
     "DESCRIPTIONS": [
       "每当你受到 #y未被格挡 的伤害时，获得 #b",
       " 层 再生 。"
     ]
   },
-  "innerpower": {
+  "mi_innerpower": {
     "NAME": "内在潜能",
     "DESCRIPTIONS": [
       "每回合抽到的第 #b1 张牌在本回合内耗能降低1点",
       "每回合抽到的前 #b",
       " 张牌在本回合内耗能降低1点。"
+    ]
+  },
+  "mi_ghost_vessel": {
+    "NAME": "幽魂能量",
+    "DESCRIPTIONS": [
+      "使 #y收割 的伤害提高 #b",
+      " 点"
     ]
   }
 }

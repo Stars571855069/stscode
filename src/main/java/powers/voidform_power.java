@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 
 public class voidform_power extends AbstractPower {
 
-    public static final String POWER_ID = "void_form";
+    public static final String POWER_ID = "mi_void_form";
     private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public voidform_power (AbstractCreature owner, int DEX_Amount){
 

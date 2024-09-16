@@ -35,5 +35,9 @@
     "NAME": "强攻",
     "DESCRIPTION": "抽2张牌，如果抽到的都为 *攻击 牌，则获得 [E] 。",
     "UPGRADE_DESCRIPTION": "抽2张牌，如果抽到的都为 *攻击 牌，则获得 [E] [E] 。"
+  },
+  "mi_reaper": {
+    "NAME": "收割",
+    "DESCRIPTION": " 保留 , 消耗 NL 造成 !D! 点伤害。 NL 斩杀时，获得 *1 层 mikanmod:幽魂能量 。"
   }
 }

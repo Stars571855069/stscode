@@ -2,33 +2,37 @@ package demoMod;
 
 import basemod.AutoAdd;
 import basemod.helpers.RelicType;
-import basemod.interfaces.EditCharactersSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.*;
 import cards.defend_mi;
 import cards.hammerstrike_mi;
 import cards.strike_mi;
 import characters.mikan;
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.badlogic.gdx.graphics.Color;
 import basemod.BaseMod;
-import basemod.interfaces.EditCardsSubscriber;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.KeywordStrings;
+import javassist.compiler.ast.Keyword;
 import pathes.ThmodClassEnum;
 import relics.mi_darkenergy;
 import com.badlogic.gdx.graphics.Color;
+import relics.mi_ghost_vessel;
+
+import java.nio.charset.StandardCharsets;
 
 import static characters.mikan.PlayerColorEnum.EXAMPLE_GREEN;
 import static characters.mikan.PlayerColorEnum.MY_CHARACTER;
 //import static characters.mikan.PlayerLibraryEnum.MY_CHARACTER;
 
 @SpireInitializer
-public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber {
+public class modecore implements EditCardsSubscriber, EditKeywordsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber {
 
 
     // 人物选择界面按钮的图片
@@ -76,6 +80,11 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
                 .cards(); // 开始批量添加卡牌
     }
 
+    @Override
+    public void receiveEditKeywords() {
+        BaseMod.addKeyword("mikanmod", "幽魂能量", new String[] {"幽魂能量"}, "每点 #y幽魂能量 会提高 #b收割 卡牌 #y3 点伤害。");
+    }
+
     public void receiveEditStrings() {
         String lang;
         if (Settings.language == Settings.GameLanguage.ZHS) {
@@ -97,6 +106,8 @@ public class modecore implements EditCardsSubscriber,EditStringsSubscriber,EditC
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelic(new mi_darkenergy(),RelicType.SHARED); // RelicType表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
+        BaseMod.addRelic(new mi_darkenergy(),RelicType.SHARED);
+        BaseMod.addRelic(new mi_ghost_vessel(),RelicType.SHARED);
+        // RelicType表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
     }
 }

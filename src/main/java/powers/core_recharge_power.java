@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 
 public class core_recharge_power extends AbstractPower {
 
-    public static final String POWER_ID = "core_recharge";
+    public static final String POWER_ID = "mi_core_recharge";
     private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public core_recharge_power(AbstractCreature owner, int HEAL_Amount){
 

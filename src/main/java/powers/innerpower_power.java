@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class innerpower_power extends AbstractPower {
 
-    public static final String POWER_ID = "innerpower";
+    public static final String POWER_ID = "mi_innerpower";
     private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
     private int cardscostreducedThisTurn = 0;
