@@ -44,19 +44,6 @@ public class mi_ghost_vessel extends CustomRelic{
             addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ghost_vessel_power(AbstractDungeon.player, GHOST_ENERGY_CHARGE), GHOST_ENERGY_CHARGE));
     }
 
-    @Override
-    public void onVictory(){
-        flash();
-        AbstractPlayer p = AbstractDungeon.player;
-        addToTop((AbstractGameAction)new RelicAboveCreatureAction((AbstractCreature)p, this));
-        for (AbstractPower power:p.powers) {
-            if (power instanceof ghost_vessel_power)
-                this.counter=power.amount;
-               // addToTop((AbstractGameAction)new RemoveSpecificPowerAction(this.c, this.c, p.ID));
-        }
-        //this.counter=+;
-    }
-
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }

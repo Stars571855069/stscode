@@ -20,7 +20,7 @@ public class reaper_mi extends CustomCard{
     private static final CardColor COLOR = CardColor.COLORLESS;
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_brutalstrike.png";
+    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_reaper.png";
 
     private static final CardType TYPE = CardType.ATTACK;
     private static final int COST = 1;
