@@ -25,7 +25,8 @@
   },
   "mi_core_recharge": {
     "NAME": "核心重载",
-    "DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。"
+    "DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。 NL  虚无 ",
+    "UPGRADE_DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。"
   },
   "mi_innerpower": {
     "NAME": "内在潜能",
@@ -38,6 +39,26 @@
   },
   "mi_reaper": {
     "NAME": "收割",
-    "DESCRIPTION": " 保留 , 消耗 NL 造成 !D! 点伤害。 NL 斩杀时，使 *幽魂容器 遗物的充能点数永久提高 *1 点。"
+    "DESCRIPTION": " 保留 , 消耗 NL 造成 !D! 点伤害。 NL  斩杀 时，使 *幽魂容器 遗物的充能点数永久提高 *1 点。"
+  },
+  "mi_specterform": {
+    "NAME": "化形",
+    "DESCRIPTION": "获得 !M! 层 无实体 ，失去 *2 点 敏捷 。 NL  消耗 "
+  },
+  "mi_crossfire": {
+    "NAME": "正面交火",
+    "DESCRIPTION": "造成 !D! 点伤害，如果目标的意图不是 *攻击 ，则只造成一半伤害。"
+  },
+  "mi_specter_dagger": {
+    "NAME": "幽魂匕首",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
+  },
+  "mi_shadow_enchant": {
+    "NAME": "暗影附魔",
+    "DESCRIPTION": "本回合内， *攻击 牌不再消耗 [E] ，改为消耗等同于其耗能的 *生命 。"
+  },
+  "mi_shatter_form": {
+    "NAME": "分离",
+    "DESCRIPTION": "获得 !B! 点 格挡 ，将下一次受到的伤害反馈给攻击者。"
   }
 }

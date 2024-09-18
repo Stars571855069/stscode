@@ -82,7 +82,8 @@ public class modecore implements EditCardsSubscriber, EditKeywordsSubscriber,Edi
 
     @Override
     public void receiveEditKeywords() {
-        BaseMod.addKeyword("mikanmod", "幽魂能量", new String[] {"幽魂能量"}, "每点 #y幽魂能量 会提高 #b收割 卡牌 #y3 点伤害。");
+        BaseMod.addKeyword("mikanmod", "幽魂能量", new String[] {"幽魂能量"}, "每点 #y幽魂能量 会使 #b收割 卡牌的伤害提高 #y3 点。");
+        BaseMod.addKeyword("mikanmod", "吸血", new String[] {"吸血"}, " #y未被格挡 的攻击伤害会用以恢复生命值");
     }
 
     public void receiveEditStrings() {

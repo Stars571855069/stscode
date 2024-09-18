@@ -31,11 +31,12 @@ public class core_recharge_mi extends CustomCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int REGEN_GAIN = 1;
-    private static final int REGEN_GAIN_UPGRADE = 1;
+    //private static final int REGEN_GAIN_UPGRADE = 1;
 
     public core_recharge_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = REGEN_GAIN;
+        this.isEthereal = true;
     }
 
     @Override
@@ -53,8 +54,9 @@ public class core_recharge_mi extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            //upgradeMagicNumber();
-            upgradeMagicNumber(REGEN_GAIN_UPGRADE);
+            this.isEthereal = false;
+            this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
