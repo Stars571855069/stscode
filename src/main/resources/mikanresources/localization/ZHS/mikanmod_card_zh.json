@@ -78,7 +78,7 @@
   },
   "mi_heavy_smash": {
     "NAME": "猛砸",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当你抽到这张牌时，使其耗能减少1 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当你抽到这张牌时，使其在本场战斗内的耗能减少1 [E] 。"
   },
   "mi_ghosty_strike": {
     "NAME": "幽魂打击",
@@ -86,5 +86,17 @@
     "EXTENDED_DESCRIPTION":[
       "我没有足够的 #r幽魂能量 可以消耗！"
     ]
+  },
+  "mi_essence_retrive": {
+    "NAME": "精华回收",
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 每当你使用 *攻击 牌时，恢复 *1 点生命。 NL  消耗 。"
+  },
+  "mi_pocket_essence": {
+    "NAME": "袋装精华",
+    "DESCRIPTION": "抽 !M! 张牌 ，回复1点生命。 NL 每次使用这张牌后，使其在本场战斗内的耗能减少1 [E] 。"
+  },
+  "mi_delusion": {
+    "NAME": "幻觉",
+    "DESCRIPTION": "获得 !M! 层 mikanmod:幽魂能量 。"
   }
 }

@@ -25,7 +25,7 @@ public class ghosty_strike_mi extends CustomCard{
     private static final CardColor COLOR = EXAMPLE_GREEN;
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_piercing_strike.png";
+    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_ghosty_strike.png";
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;

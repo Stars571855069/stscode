@@ -35,7 +35,9 @@ public class strike_mi extends CustomCard{
     public strike_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         //添加基础攻击标签和将伤害设为6
-        this.tags.add(BaseModCardTags.BASIC_STRIKE);
+        //this.tags.add(BaseModCardTags.BASIC_STRIKE);
+        this.tags.add(AbstractCard.CardTags.STRIKE);
+        this.tags.add(AbstractCard.CardTags.STARTER_STRIKE);
         this.baseDamage = ATTACK_DMG;
         this.damage=this.baseDamage;
     }
@@ -50,7 +52,7 @@ public class strike_mi extends CustomCard{
 
     public AbstractCard makeCopy() {
         //复制卡牌时触发
-        return (AbstractCard)new strike_mi();
+        return new strike_mi();
     }
     @Override
     public boolean isStrike() {
