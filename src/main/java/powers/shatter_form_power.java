@@ -26,8 +26,8 @@ public class shatter_form_power extends AbstractPower {
         this.name=POWER_STRINGS.NAME;
         this.owner = owner;
         this.amount = Amount;
-        String path128 = "mikanresources/images/power_img/mi_innerpower_128.png";
-        String path48 = "mikanresources/images/power_img/mi_innerpower_48.png";
+        String path128 = "mikanresources/images/power_img/mi_shatter_form_128.png";
+        String path48 = "mikanresources/images/power_img/mi_shatter_form_48.png";
         //this.region48 = atlas.findRegion("48/" + fileName);
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
@@ -50,8 +50,8 @@ public class shatter_form_power extends AbstractPower {
             this.amount--;
             this.updateDescription();
             AbstractDungeon.actionManager.addToBottom(new DamageAction(info.owner, new DamageInfo(this.owner, damageAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-            if (this.amount == 0) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "mi_shatter_form_power"));
+            if (this.amount <= 0) {
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "mi_shatter_form"));
             }
         }
         return damageAmount;

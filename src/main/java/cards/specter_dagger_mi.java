@@ -25,11 +25,11 @@ public class specter_dagger_mi extends CustomCard{
 
     private static final CardType TYPE = CardType.ATTACK;
     private static final int COST = 1;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int UPGRADE_DAMAGE = 2;
     private static final int ATTACK_DMG = 4;
-    private static final int ATTACK_TIMES = 2;
+    private static final int ATTACK_TIMES = 3;
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public specter_dagger_mi() {

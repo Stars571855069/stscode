@@ -9,11 +9,11 @@
   },
   "mi_hammerstrike": {
     "NAME": "aluna锤击",
-    "DESCRIPTION": "造成 !D! 点伤害，给予1层 易伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予1层 易伤 。"
   },
   "mi_darkbarrier": {
     "NAME": "鲜血屏障",
-    "DESCRIPTION": "失去 !M! 点生命，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "失去 !M! 点生命。 NL 获得 !B! 点 格挡 。"
   },
   "mi_brutalstrike": {
     "NAME": "残虐打击",
@@ -43,11 +43,11 @@
   },
   "mi_specterform": {
     "NAME": "化形",
-    "DESCRIPTION": "获得 !M! 层 无实体 ，失去 *2 点 敏捷 。 NL  消耗 "
+    "DESCRIPTION": "失去 *2 点 敏捷 。 NL 获得 *1 层 人工制品 。 NL 获得 *2 层 无实体。 NL  消耗 "
   },
   "mi_crossfire": {
     "NAME": "正面交火",
-    "DESCRIPTION": "造成 !D! 点伤害，如果目标的意图不是 *攻击 ，则只造成一半伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害，如果目标的意图是 *攻击 ，则造成2倍伤害。"
   },
   "mi_specter_dagger": {
     "NAME": "幽魂匕首",
@@ -55,10 +55,36 @@
   },
   "mi_shadow_enchant": {
     "NAME": "暗影附魔",
-    "DESCRIPTION": "本回合内， *攻击 牌不再消耗 [E] ，改为消耗等同于其耗能的 *生命 。"
+    "DESCRIPTION": "本回合内， *攻击 牌不再消耗 [E] ，改为消耗等同于其耗能 [E] 的 *生命 。"
   },
   "mi_shatter_form": {
     "NAME": "分离",
-    "DESCRIPTION": "获得 !B! 点 格挡 ，将下一次受到的伤害反馈给攻击者。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将下一次受到的伤害反馈给攻击者。"
+  },
+  "mi_power_exchange": {
+    "NAME": "再循环",
+    "DESCRIPTION": "失去 !M! 点 敏捷 。 NL 获得 !M! 点 力量 。"
+  },
+  "mi_ritual": {
+    "NAME": "仪式",
+    "DESCRIPTION": " 不能被打出 。 NL 在你的回合结束时,获得 !M! 层 mikanmod:幽魂能量 。",
+    "EXTENDED_DESCRIPTION":[
+      "我 #r不能 打出这张牌！"
+    ]
+  },
+  "mi_piercing_strike": {
+    "NAME": "刺穿",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+  },
+  "mi_heavy_smash": {
+    "NAME": "猛砸",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每当你抽到这张牌时，使其耗能减少1 [E] 。"
+  },
+  "mi_ghosty_strike": {
+    "NAME": "幽魂打击",
+      "DESCRIPTION": "消耗1点 mikanmod:幽魂能量 。 NL 造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION":[
+      "我没有足够的 #r幽魂能量 可以消耗！"
+    ]
   }
 }

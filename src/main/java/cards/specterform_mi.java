@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
@@ -33,7 +34,6 @@ public class specterform_mi extends CustomCard
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 3;
     private static final int UPGRADE_COST = 2;
-    //private static final int BLOCK_AMT = -999999;
     private static final int INTANGIBLE_AMOUNT = 2;
     //=================================================
 
@@ -49,11 +49,9 @@ public class specterform_mi extends CustomCard
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //使用卡牌时触发的动作
-        //AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(p, p, 99999));
-        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EntanglePower(p), INTANGIBLE_AMOUNT));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p,-2), -2));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(AbstractDungeon.player, INTANGIBLE_AMOUNT), INTANGIBLE_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(AbstractDungeon.player, 1), 1));
     }
 
     @Override
@@ -67,7 +65,6 @@ public class specterform_mi extends CustomCard
     public void upgrade() {
         //卡牌升级后的效果
         if (!this.upgraded) {
-            //更改名字和提高3点格挡
             upgradeName();
             upgradeBaseCost(UPGRADE_COST);
         }

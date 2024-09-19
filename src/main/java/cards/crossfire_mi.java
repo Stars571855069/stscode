@@ -26,8 +26,8 @@ public class crossfire_mi extends CustomCard{
     private static final int COST = 0;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int UPGRADE_DAMAGE = 6;
-    private static final int ATTACK_DMG = 12;
+    private static final int UPGRADE_DAMAGE = 3;
+    private static final int ATTACK_DMG = 6;
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public crossfire_mi() {

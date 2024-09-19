@@ -36,6 +36,7 @@ public class ghost_vessel_power extends AbstractPower {
         updateExistingReapers();
     }
 
+
     public void updateDescription() {
         this.description = POWER_STRINGS.DESCRIPTIONS[0] + this.amount*3 + POWER_STRINGS.DESCRIPTIONS[1];
     }
