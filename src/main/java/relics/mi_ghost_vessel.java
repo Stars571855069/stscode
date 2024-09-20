@@ -1,5 +1,6 @@
 package relics;
 
+import actions.ghost_vessel_reaper_upgrade_action;
 import basemod.abstracts.CustomRelic;
 import cards.reaper_mi;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -39,9 +40,10 @@ public class mi_ghost_vessel extends CustomRelic{
     public void atBattleStart() {
         int GHOST_ENERGY_CHARGE = this.counter;
         flash();
-        AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction((AbstractCreature)AbstractDungeon.player, this));
+        AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new reaper_mi(), 1, false));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ghost_vessel_power(AbstractDungeon.player, GHOST_ENERGY_CHARGE), GHOST_ENERGY_CHARGE));
+        AbstractDungeon.actionManager.addToBottom(new ghost_vessel_reaper_upgrade_action(AbstractDungeon.player,GHOST_ENERGY_CHARGE));
     }
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];

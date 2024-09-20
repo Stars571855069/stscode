@@ -22,11 +22,11 @@ public class essence_retrive_power extends AbstractPower {
 
     public static final String POWER_ID = "mi_essence_retrive";
     private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    public essence_retrive_power(AbstractCreature owner, int Amount){
+    public essence_retrive_power(AbstractMonster Monster, int Amount){
 
         this.ID= POWER_ID;
         this.name=POWER_STRINGS.NAME;
-        this.owner = owner;
+        this.owner = Monster;
         this.amount = Amount;
         this.type = PowerType.DEBUFF;
         String path128 = "mikanresources/images/power_img/mi_essence_retrive_128.png";

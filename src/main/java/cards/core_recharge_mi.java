@@ -30,7 +30,7 @@ public class core_recharge_mi extends CustomCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int REGEN_GAIN = 1;
+    private static final int REGEN_GAIN = 2;
     //private static final int REGEN_GAIN_UPGRADE = 1;
 
     public core_recharge_mi() {

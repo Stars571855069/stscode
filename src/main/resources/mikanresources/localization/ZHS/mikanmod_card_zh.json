@@ -43,7 +43,7 @@
   },
   "mi_specterform": {
     "NAME": "化形",
-    "DESCRIPTION": "失去 *2 点 敏捷 。 NL 获得 *1 层 人工制品 。 NL 获得 *2 层 无实体。 NL  消耗 "
+    "DESCRIPTION": "失去 *2 点 敏捷 。 NL 获得 *1 层 人工制品 。 NL 获得 *2 层 无实体。 NL  消耗 。"
   },
   "mi_crossfire": {
     "NAME": "正面交火",

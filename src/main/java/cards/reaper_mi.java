@@ -3,6 +3,7 @@ package cards;
 import actions.brutalstrike_action;
 import actions.ghost_vessel_action;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -44,8 +45,6 @@ public class reaper_mi extends CustomCard{
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
         AbstractDungeon.actionManager.addToBottom(new ghost_vessel_action(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-        //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)m, new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)p, (AbstractPower)new VulnerablePower((AbstractCreature)m, 2, false), 2));
     }
 
     @Override

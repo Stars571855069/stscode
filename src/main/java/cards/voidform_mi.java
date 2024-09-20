@@ -33,7 +33,7 @@ public class voidform_mi extends CustomCard {
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int DEX_GAIN = 1;
+    private static final int DEX_GAIN = 2;
     private static final int DEX_GAIN_UPGRADE = 1;
 
     public voidform_mi() {
@@ -49,7 +49,7 @@ public class voidform_mi extends CustomCard {
     @Override
     public AbstractCard makeCopy() {
         //复制卡牌时触发
-        return (AbstractCard)new voidform_mi();
+        return new voidform_mi();
     }
 
     @Override

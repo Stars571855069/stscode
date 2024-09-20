@@ -44,8 +44,8 @@ public class essence_retrive_mi extends CustomCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p,new WeakPower(p,this.magicNumber,false),this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p,new essence_retrive_power(p,HP_RESTORE_AMOUNT),HP_RESTORE_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p,new WeakPower(m,this.magicNumber,false),this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p,new essence_retrive_power(m,HP_RESTORE_AMOUNT),HP_RESTORE_AMOUNT));
     }
 
     @Override
