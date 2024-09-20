@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class brutalstrike_action extends AbstractGameAction {
@@ -15,7 +16,8 @@ public class brutalstrike_action extends AbstractGameAction {
 
     @Override
     public void update() {
-        this.target.damage(this.info);
+        //this.target.damage(this.info);
+        AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (this.target != null && this.target.hasPower("Weakened")) {
             this.addToTop(new GainEnergyAction(2));
         }

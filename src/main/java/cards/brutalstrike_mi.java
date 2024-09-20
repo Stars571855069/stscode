@@ -41,6 +41,7 @@ public class brutalstrike_mi extends CustomCard{
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         //添加基础攻击标签和将伤害设为6
         //this.tags.add(BaseModCardTags.BASIC_STRIKE);
+        this.tags.add(AbstractCard.CardTags.STRIKE);
         this.baseDamage = ATTACK_DMG;
         this.baseMagicNumber=ENERGY_REFUND_BASE;
         this.damage = this.baseDamage;

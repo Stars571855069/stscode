@@ -2,8 +2,10 @@ package actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
@@ -28,7 +30,8 @@ public class crossfire_action extends AbstractGameAction {
             //this.info.base=this.info.base/2;
             if (this.targetMonster != null) {
                 //this.info.base=this.info.base/2;
-                this.targetMonster.damage(this.info);
+                AbstractDungeon.actionManager.addToTop(new DamageAction(this.targetMonster, this.info, AttackEffect.SLASH_DIAGONAL));
+                //this.targetMonster.damage(this.info);
 
             }
         }

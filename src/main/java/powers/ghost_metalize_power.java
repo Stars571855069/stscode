@@ -5,24 +5,25 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 
-public class voidform_power extends AbstractPower {
+public class ghost_metalize_power extends AbstractPower {
 
-    public static final String POWER_ID = "mi_void_form";
+    public static final String POWER_ID = "mi_ghost_metalize";
     private static final PowerStrings POWER_STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    public voidform_power (AbstractCreature owner, int DEX_Amount){
+    public ghost_metalize_power(AbstractCreature owner, int Amount){
 
         this.ID= POWER_ID;
         this.name=POWER_STRINGS.NAME;
         this.owner = owner;
-        this.amount = DEX_Amount;
+        this.amount = Amount;
         this.type = PowerType.BUFF;
-        String path128 = "mikanresources/images/power_img/mi_void_form_128.png";
-        String path48 = "mikanresources/images/power_img/mi_void_form_48.png";
+        String path128 = "mikanresources/images/power_img/mi_ghost_metalize_128.png";
+        String path48 = "mikanresources/images/power_img/mi_ghost_metalize_48.png";
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
         this.updateDescription();
@@ -33,7 +34,7 @@ public class voidform_power extends AbstractPower {
     }
     public void atStartOfTurnPostDraw() {
         flash();
-        addToBot((AbstractGameAction)new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.amount), this.amount));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ghost_vessel_power(AbstractDungeon.player, this.amount), this.amount));
     }
 
 }
