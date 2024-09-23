@@ -82,7 +82,7 @@
   },
   "mi_ghosty_strike": {
     "NAME": "幽魂打击",
-      "DESCRIPTION": "消耗1点 mikanmod:幽魂能量 。 NL 造成 !D! 点伤害。",
+      "DESCRIPTION": "消耗1层 mikanmod:幽魂能量 。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION":[
       "我没有足够的 #r幽魂能量 可以消耗！"
     ]
@@ -101,8 +101,8 @@
   },
   "mi_rearming": {
     "NAME": "再装填",
-    "DESCRIPTION": "消耗2点 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] [E] ",
-    "UPGRADE_DESCRIPTION": "消耗2点 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] [E] [E] 。",
+    "DESCRIPTION": "消耗2层 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗2层 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] [E] [E] 。",
     "EXTENDED_DESCRIPTION":[
       "我没有足够的 #r幽魂能量 可以消耗！"
     ]
@@ -117,6 +117,15 @@
   },
   "mi_gathering": {
     "NAME": "汇聚",
-    "DESCRIPTION": "获得 !M! 层 mikanmod:幽魂能量 和 !B! 点格挡X次。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 层 mikanmod:幽魂能量 和 !B! 点格挡X次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 mikanmod:幽魂能量 和 !B! 点格挡X次。"
+  },
+  "mi_catastrophe": {
+    "NAME": "灭除",
+    "DESCRIPTION": "移除所有 mikanmod:幽魂能量 层数，每 !M! 点 *幽魂能量 会转化为1点 力量 。 NL 消耗 。"
+  },
+  "mi_scythe_of_wraith": {
+    "NAME": "幽魂镰刀",
+    "DESCRIPTION": "将 !M! 张 *收割 洗入你的抽牌堆。"
   }
 }

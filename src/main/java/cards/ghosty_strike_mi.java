@@ -53,7 +53,7 @@ public class ghosty_strike_mi extends CustomCard{
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         AbstractPower power=AbstractDungeon.player.getPower("mi_ghost_vessel");
-        if (power.amount>GHOST_VESSEL_CONSUME_AMOUNT){
+        if (power.amount>=GHOST_VESSEL_CONSUME_AMOUNT){
             return true;
         }
         else{

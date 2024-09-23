@@ -35,7 +35,15 @@ public class ghost_vessel_power extends AbstractPower {
         this.updateDescription();
         updateExistingReapers();
     }
-
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        if (this.amount <= 0) {
+            this.amount = 0;
+        }
+        updateDescription();
+        updateExistingReapers();
+    }
 
     public void updateDescription() {
         this.description = POWER_STRINGS.DESCRIPTIONS[0] + this.amount*3 + POWER_STRINGS.DESCRIPTIONS[1];

@@ -44,7 +44,7 @@ public class voidform_mi extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new voidform_power((AbstractCreature)p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new voidform_power(p, this.magicNumber), this.magicNumber));
     }
     @Override
     public AbstractCard makeCopy() {

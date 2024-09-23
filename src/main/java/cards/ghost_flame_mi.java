@@ -39,7 +39,7 @@ public class ghost_flame_mi extends CustomCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p,new WeakPower(p,this.magicNumber,false),this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m,p,new WeakPower(m,this.magicNumber,false),this.magicNumber));
     }
 
     @Override
