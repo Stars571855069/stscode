@@ -24,7 +24,7 @@
     "DESCRIPTION": "在你的回合开始时，获得 !M! 点 敏捷 。"
   },
   "mi_core_recharge": {
-    "NAME": "核心重载",
+    "NAME": "核心修复",
     "DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。 NL  虚无 ",
     "UPGRADE_DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。"
   },
@@ -54,7 +54,7 @@
     "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
   },
   "mi_shadow_enchant": {
-    "NAME": "暗影附魔",
+    "NAME": "生命附魔",
     "DESCRIPTION": "本回合内， *攻击 牌不再消耗 [E] ，改为消耗等同于其耗能 [E] 的 *生命 。"
   },
   "mi_shatter_form": {
@@ -121,11 +121,11 @@
     "UPGRADE_DESCRIPTION": "获得 !M! 层 mikanmod:幽魂能量 和 !B! 点格挡X次。"
   },
   "mi_catastrophe": {
-    "NAME": "灭除",
+    "NAME": "实体击打",
     "DESCRIPTION": "移除所有 mikanmod:幽魂能量 层数，每 !M! 点 *幽魂能量 会转化为1点 力量 。 NL 消耗 。"
   },
   "mi_scythe_of_wraith": {
     "NAME": "幽魂镰刀",
-    "DESCRIPTION": "将 !M! 张 *收割 洗入你的抽牌堆。"
+    "DESCRIPTION": "将 !M! 张 *收割 洗入你的抽牌堆。 NL 消耗 。"
   }
 }

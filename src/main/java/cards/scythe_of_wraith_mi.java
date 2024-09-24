@@ -26,9 +26,10 @@ public class scythe_of_wraith_mi extends CustomCard
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
+    private static final int COST_UPGRADE = 1;
 
     private static final int CARDS_SHUFFLE_AMOUNT = 1;
-    private static final int CARDS_SHUFFLE_AMOUNT_UPGRADE = 1;
+    //private static final int CARDS_SHUFFLE_AMOUNT_UPGRADE = 1;
     //=================================================
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
@@ -56,9 +57,9 @@ public class scythe_of_wraith_mi extends CustomCard
     public void upgrade() {
         //卡牌升级后的效果
         if (!this.upgraded) {
-            //更改名字和提高3点格挡
             upgradeName();
-            upgradeMagicNumber(CARDS_SHUFFLE_AMOUNT_UPGRADE);
+            upgradeBaseCost(COST_UPGRADE);
+            //upgradeMagicNumber(CARDS_SHUFFLE_AMOUNT_UPGRADE);
         }
     }
 

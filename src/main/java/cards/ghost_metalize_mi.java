@@ -37,7 +37,7 @@ public class ghost_metalize_mi extends CustomCard {
 
     public ghost_metalize_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber=this.baseMagicNumber= GHOST_ENERGY_GAIN;;
+        this.magicNumber=this.baseMagicNumber= GHOST_ENERGY_GAIN;
     }
 
     @Override
