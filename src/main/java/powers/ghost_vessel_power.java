@@ -4,6 +4,7 @@ import cards.reaper_mi;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -24,8 +25,6 @@ public class ghost_vessel_power extends AbstractPower {
         this.name=POWER_STRINGS.NAME;
         this.owner = owner;
         this.amount = Amount;
-        //this.type = PowerType.BUFF;
-        //System.out.print(this.name);
 
         String path128 = "mikanresources/images/power_img/mi_ghost_vessel_128.png";
         String path48 = "mikanresources/images/power_img/mi_ghost_vessel_48.png";
@@ -34,6 +33,7 @@ public class ghost_vessel_power extends AbstractPower {
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
         this.updateDescription();
         updateExistingReapers();
+        phantom_barrier_block_check();
     }
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
@@ -43,6 +43,15 @@ public class ghost_vessel_power extends AbstractPower {
         }
         updateDescription();
         updateExistingReapers();
+        //phantom_barrier_block_check();
+    }
+
+    public void phantom_barrier_block_check(){
+        AbstractPower energy=this.owner.getPower("mi_phantom_barrier");
+        if(energy!=null) {
+            int block_amount=energy.amount;
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, block_amount));
+        }
     }
 
     public void updateDescription() {

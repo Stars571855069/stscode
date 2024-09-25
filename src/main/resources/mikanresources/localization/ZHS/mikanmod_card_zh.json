@@ -127,5 +127,9 @@
   "mi_scythe_of_wraith": {
     "NAME": "幽魂镰刀",
     "DESCRIPTION": "将 !M! 张 *收割 洗入你的抽牌堆。 NL 消耗 。"
+  },
+  "mi_phantom_barrier": {
+    "NAME": "幻影壁垒",
+    "DESCRIPTION": "每当 mikanmod:幽魂能量 增加或降低时，获得 !B! 点 格挡 。"
   }
 }

@@ -23,7 +23,7 @@ public class crossfire_action extends AbstractGameAction {
     public void update() {
         //this.target.damage(this.info);
         if (this.targetMonster != null && this.targetMonster.getIntentBaseDmg() >= 0) {
-            addToBot(new VFXAction(new ClashEffect(this.targetMonster.hb.cX, this.targetMonster.hb.cY), 0.1F));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new ClashEffect(this.targetMonster.hb.cX, this.targetMonster.hb.cY), 0.1F));
             this.targetMonster.damage(new DamageInfo(this.info.owner, this.info.base*2, DamageInfo.DamageType.NORMAL));
         }
         else {
