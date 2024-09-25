@@ -44,7 +44,7 @@ public class innerpower_power extends AbstractPower {
     }
 
     public void onCardDraw(AbstractCard card) {
-        if (this.cardscostreducedThisTurn>0 && card.type!= AbstractCard.CardType.CURSE &&card.cost!=-2) {
+        if (this.cardscostreducedThisTurn>0 && card.type!= AbstractCard.CardType.CURSE &&card.cost!=-2 && card.cost!=-1) {
             this.flash();
             this.cardscostreducedThisTurn--;
             card.setCostForTurn(card.cost-1);

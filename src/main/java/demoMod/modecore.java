@@ -3,33 +3,24 @@ package demoMod;
 import basemod.AutoAdd;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import cards.defend_mi;
-import cards.hammerstrike_mi;
 import cards.strike_mi;
 import characters.mikan;
-import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.badlogic.gdx.graphics.Color;
 import basemod.BaseMod;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.localization.KeywordStrings;
-import javassist.compiler.ast.Keyword;
-import pathes.ThmodClassEnum;
-import relics.mi_darkenergy;
-import com.badlogic.gdx.graphics.Color;
 import relics.mi_ghost_vessel;
 
-import java.nio.charset.StandardCharsets;
 
 import static characters.mikan.PlayerColorEnum.EXAMPLE_GREEN;
 import static characters.mikan.PlayerColorEnum.MY_CHARACTER;
-//import static characters.mikan.PlayerLibraryEnum.MY_CHARACTER;
+import static com.megacrit.cardcrawl.core.Settings.language;
+
 
 @SpireInitializer
 public class modecore implements EditCardsSubscriber, EditKeywordsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber {
@@ -84,14 +75,13 @@ public class modecore implements EditCardsSubscriber, EditKeywordsSubscriber,Edi
     public void receiveEditKeywords() {
         BaseMod.addKeyword("mikanmod", "幽魂能量", new String[] {"幽魂能量"}, "每点 #y幽魂能量 会使 #b收割 卡牌的伤害提高 #y3 点。");
         BaseMod.addKeyword("mikanmod", "吸血", new String[] {"吸血"}, " #y未被格挡 的攻击伤害会用以恢复生命值");
-        //BaseMod.addKeyword("mikanmod", "收割");
-        
+        BaseMod.addKeyword("mikanmod", "增益", new String[] {"增益","增益效果"}, " #y增益效果 包括： 力量 ， 敏捷 ，金属化 ， 再生 ， 多层护甲 。");
 
     }
 
     public void receiveEditStrings() {
         String lang;
-        if (Settings.language == Settings.GameLanguage.ZHS) {
+        if (language == Settings.GameLanguage.ZHS) {
             lang = "ZHS";
         } else {
             lang = "ENG";
@@ -110,7 +100,6 @@ public class modecore implements EditCardsSubscriber, EditKeywordsSubscriber,Edi
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelic(new mi_darkenergy(),RelicType.SHARED);
         BaseMod.addRelic(new mi_ghost_vessel(),RelicType.SHARED);
         // RelicType表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
     }

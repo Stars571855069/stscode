@@ -1,9 +1,9 @@
 {
   "modid": "MikanMod",
   "name": "蜜柑的Mod",
-  "author_list": ["114514"],
-  "description": "作为教程的mod。",
-  "version": "0.0.1",
+  "author_list": ["膜法蜜柑"],
+  "description": "加入了幽魂武士作为可玩的角色。",
+  "version": "2024.9.25",
   "sts_version": "12-22-2020",
   "mts_version": "3.23.2",
   "dependencies": ["basemod"]
