@@ -26,8 +26,8 @@ public class healing_fountain_mi extends CustomCard
     private static final CardColor COLOR = EXAMPLE_GREEN;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
-    private static final int COST_UPGRADE = 0;
+    private static final int COST = 2;
+    private static final int COST_UPGRADE = 1;
 
     private static final int BASE_HEALING_AMOUNT = 2;
     private static final int HEALING_INCREASE_AMOUNT=1;

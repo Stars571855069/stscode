@@ -39,15 +39,20 @@ public class innerpower_power extends AbstractPower {
         }
     }
 
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
+
     public void atStartOfTurn() {
         this.cardscostreducedThisTurn = this.amount;
     }
 
     public void onCardDraw(AbstractCard card) {
-        if (this.cardscostreducedThisTurn>0 && card.type!= AbstractCard.CardType.CURSE &&card.cost!=-2 && card.cost!=-1) {
+        if (this.cardscostreducedThisTurn>0 && card.type!= AbstractCard.CardType.CURSE &&card.costForTurn>0 &&!card.freeToPlayOnce) {
             this.flash();
             this.cardscostreducedThisTurn--;
-            card.setCostForTurn(card.cost-1);
+            card.setCostForTurn(card.costForTurn-1);
         }
     }
 }

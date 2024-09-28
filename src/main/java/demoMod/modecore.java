@@ -75,7 +75,7 @@ public class modecore implements EditCardsSubscriber, EditKeywordsSubscriber,Edi
     public void receiveEditKeywords() {
         BaseMod.addKeyword("mikanmod", "幽魂能量", new String[] {"幽魂能量"}, "每点 #y幽魂能量 会使 #b收割 卡牌的伤害提高 #y3 点。");
         BaseMod.addKeyword("mikanmod", "吸血", new String[] {"吸血"}, " #y未被格挡 的攻击伤害会用以恢复生命值");
-        BaseMod.addKeyword("mikanmod", "增益", new String[] {"增益","增益效果"}, " #y增益效果 包括： 力量 ， 敏捷 ，金属化 ， 再生 ， 多层护甲 。");
+        BaseMod.addKeyword("mikanmod", "增益", new String[] {"增益","增益效果"}, " #y增益效果 包括： 力量 ， 敏捷 ，金属化 ， 再生 ， 多层护甲 ， 荆棘 。");
 
     }
 

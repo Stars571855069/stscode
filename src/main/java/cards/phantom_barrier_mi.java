@@ -33,12 +33,12 @@ public class phantom_barrier_mi extends CustomCard
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public phantom_barrier_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.block=this.baseBlock=BLOCK_AMOUNT;
+        this.magicNumber=this.baseMagicNumber=BLOCK_AMOUNT;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new phantom_barrier_power(p,this.block)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new phantom_barrier_power(p,this.magicNumber)));
 
     }
 
@@ -55,7 +55,7 @@ public class phantom_barrier_mi extends CustomCard
         if (!this.upgraded) {
             //更改名字和提高3点格挡
             upgradeName();
-            upgradeBlock(BLOCK_AMOUNT_UPGRADE);
+            upgradeMagicNumber(BLOCK_AMOUNT_UPGRADE);
         }
     }
 

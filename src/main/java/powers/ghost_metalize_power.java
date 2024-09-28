@@ -29,6 +29,11 @@ public class ghost_metalize_power extends AbstractPower {
         this.updateDescription();
     }
 
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
+
     public void updateDescription() {
         this.description = POWER_STRINGS.DESCRIPTIONS[0] + this.amount + POWER_STRINGS.DESCRIPTIONS[1];
     }

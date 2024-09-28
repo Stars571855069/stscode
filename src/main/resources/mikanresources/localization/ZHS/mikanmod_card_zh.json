@@ -30,7 +30,7 @@
   },
   "mi_innerpower": {
     "NAME": "内在潜能",
-    "DESCRIPTION": "每回合抽到的第1张牌在本回合内的耗能降低 *1 点。"
+    "DESCRIPTION": "每回合抽到的第1张耗能大于0的牌在本回合内的耗能降低 *1 点。"
   },
   "mi_press_the_attack": {
     "NAME": "强攻",
@@ -130,7 +130,7 @@
   },
   "mi_phantom_barrier": {
     "NAME": "幻影壁垒",
-    "DESCRIPTION": "每当 mikanmod:幽魂能量 增加或降低时，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "每当 mikanmod:幽魂能量 增加或降低时，获得 !M! 点 格挡 。"
   },
   "mi_reaver": {
     "NAME": "掠取",
@@ -145,10 +145,7 @@
   },
   "mi_ghostize": {
     "NAME": "异化",
-    "DESCRIPTION": " 消耗 一张牌。 NL 获得 !M! 层 mikanmod:幽魂能量 。",
-    "EXTENDED_DESCRIPTION":[
-      "我没有 #r卡牌 可以消耗！"
-    ]
+    "DESCRIPTION": " 消耗 一张牌。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 层 mikanmod:幽魂能量 。"
   },
   "mi_extract": {
     "NAME": "萃取",

@@ -37,6 +37,12 @@ public class shadow_enchant_power extends AbstractPower {
     public void updateDescription() {
         this.description = POWER_STRINGS.DESCRIPTIONS[0];
     }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
+
     private void updateExistingAttackCards() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.type== AbstractCard.CardType.ATTACK) {

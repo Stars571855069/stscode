@@ -2,6 +2,7 @@ package cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,6 +28,8 @@ public class ghostize_mi extends CustomCard
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
+    private static final int BLOCK = 4;
+    private static final int BLOCK_UPGRADE = 4;
     private static final int GHOST_ENERGY_AMOUNT = 2;
     private static final int GHOST_ENERGY_AMOUNT_UPGRADE = 1;
     //=================================================
@@ -35,24 +38,17 @@ public class ghostize_mi extends CustomCard
     public ghostize_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber=this.baseMagicNumber = GHOST_ENERGY_AMOUNT;
+        this.block=this.baseBlock=BLOCK;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
         AbstractDungeon.actionManager.addToBottom(new ExhaustAction(1, false));;
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p,this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new ghost_vessel_power(p,this.magicNumber)));
+
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m){
-        if(p.hand.size() > 1){
-            return true;
-        }
-        else{
-            this.cantUseMessage = CARD_STRINGS.EXTENDED_DESCRIPTION[0];
-            return false;
-        }
-    }
 
     @Override
     public AbstractCard makeCopy() {
@@ -66,6 +62,7 @@ public class ghostize_mi extends CustomCard
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
+            upgradeBlock(BLOCK_UPGRADE);
             upgradeMagicNumber(GHOST_ENERGY_AMOUNT_UPGRADE);
         }
     }

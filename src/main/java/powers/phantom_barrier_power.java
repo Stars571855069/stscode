@@ -37,4 +37,9 @@ public class phantom_barrier_power extends AbstractPower {
     public void updateDescription() {
         this.description = POWER_STRINGS.DESCRIPTIONS[0] + this.amount + POWER_STRINGS.DESCRIPTIONS[1];
     }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
 }

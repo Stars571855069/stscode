@@ -40,6 +40,11 @@ public class essence_retrive_power extends AbstractPower {
         this.description = POWER_STRINGS.DESCRIPTIONS[0] + this.amount + POWER_STRINGS.DESCRIPTIONS[1];
     }
 
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
+
     public void onUseCard(AbstractCard c, UseCardAction action){
         if (c.type == AbstractCard.CardType.ATTACK){
             AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
