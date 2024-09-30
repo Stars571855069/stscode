@@ -27,11 +27,12 @@ public class essence_retrive_mi extends CustomCard
     //=================================================
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = EXAMPLE_GREEN;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 2;
-    private static final int COST_UPGRADE = 1;
-    private static final int WEAK_AMOUNT = 2;
+    //private static final int COST_UPGRADE = 1;
+    private static final int WEAK_AMOUNT = 1;
+    private static final int WEAK_AMOUNT_UPGRADE = 2;
     private static final int HP_RESTORE_AMOUNT = 1;
     //=================================================
 
@@ -60,7 +61,8 @@ public class essence_retrive_mi extends CustomCard
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(COST_UPGRADE);
+            upgradeMagicNumber(WEAK_AMOUNT_UPGRADE);
+            //upgradeBaseCost(COST_UPGRADE);
         }
     }
 

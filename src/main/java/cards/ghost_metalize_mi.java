@@ -33,7 +33,7 @@ public class ghost_metalize_mi extends CustomCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int GHOST_ENERGY_GAIN = 1;
     private static final int GHOST_ENERGY_GAIN_UPGRADE = 1;
-    private static final int METALIZE_GAIN = 6;
+    private static final int METALIZE_GAIN = 4;
 
     public ghost_metalize_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

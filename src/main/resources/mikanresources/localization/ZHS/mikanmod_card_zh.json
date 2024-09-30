@@ -109,7 +109,7 @@
   },
   "mi_ghost_metalize": {
     "NAME": "幽魂金属",
-    "DESCRIPTION": "获得6层 金属化 。 NL 在你的回合开始时，获得 !M! 层 mikanmod:幽魂能量 。"
+    "DESCRIPTION": "获得4层 金属化 。 NL 在你的回合开始时，获得 !M! 层 mikanmod:幽魂能量 。"
   },
   "mi_ghost_flame": {
     "NAME": "鬼火",
@@ -154,5 +154,9 @@
   "mi_collect": {
     "NAME": "收集",
     "DESCRIPTION": "抽1张牌。 NL 获得 !M! 层 mikanmod:幽魂能量 。 NL 消耗 。"
+  },
+  "mi_longrange_strike": {
+    "NAME": "长距扫击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标的意图不是 *攻击 ，则在下个回合开始时获得 !B! 点 格挡 。"
   }
 }
