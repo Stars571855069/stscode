@@ -1,4 +1,5 @@
 package cards;
+import actions.pocket_essence_action;
 import actions.press_the_attack_action;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -42,7 +43,7 @@ public class pocket_essence_mi extends CustomCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //使用卡牌时触发的动作
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, HEAL_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new pocket_essence_action(p, HEAL_AMOUNT));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.magicNumber));
         updateCost(-1);
     }
@@ -51,6 +52,14 @@ public class pocket_essence_mi extends CustomCard
     public AbstractCard makeCopy() {
         //复制卡牌时触发
         return new pocket_essence_mi();
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if  (AbstractDungeon.player.currentHealth<=AbstractDungeon.player.maxHealth/2) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
 

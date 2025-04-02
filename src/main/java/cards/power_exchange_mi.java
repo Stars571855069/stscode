@@ -26,10 +26,11 @@ public class power_exchange_mi extends CustomCard
     private static final CardColor COLOR = EXAMPLE_GREEN;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
     //private static final int UPGRADE_COST = 2;
-    private static final int STRENGTH_GAIN_AMOUNT = 2;
-    private static final int STRENGTH_GAIN_UPGRADE_AMOUNT = 1;
+    private static final int DEXTERITY_LOSE= -2 ;
+    private static final int STRENGTH_GAIN_AMOUNT = 4;
+    private static final int STRENGTH_GAIN_UPGRADE_AMOUNT = 2;
     //=================================================
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
@@ -40,7 +41,7 @@ public class power_exchange_mi extends CustomCard
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p,-this.magicNumber), -this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p,DEXTERITY_LOSE), DEXTERITY_LOSE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
     }
 
@@ -56,6 +57,7 @@ public class power_exchange_mi extends CustomCard
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
+            //upgradeBaseCost();
             upgradeMagicNumber(STRENGTH_GAIN_UPGRADE_AMOUNT);
         }
     }

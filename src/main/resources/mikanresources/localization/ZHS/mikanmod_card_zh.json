@@ -25,8 +25,8 @@
   },
   "mi_core_recharge": {
     "NAME": "核心修复",
-    "DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。 NL  虚无 ",
-    "UPGRADE_DESCRIPTION": "每当你受到 *未被格挡 的伤害时，获得 !M! 层 再生 。"
+    "DESCRIPTION": "每当你受到 *未被格挡 的攻击伤害时，获得 !M! 层 再生 。 NL  虚无 ",
+    "UPGRADE_DESCRIPTION": "每当你受到 *未被格挡 的攻击伤害时，获得 !M! 层 再生 。"
   },
   "mi_innerpower": {
     "NAME": "内在潜能",
@@ -63,7 +63,7 @@
   },
   "mi_power_exchange": {
     "NAME": "再循环",
-    "DESCRIPTION": "失去 !M! 点 敏捷 。 NL 获得 !M! 点 力量 。"
+    "DESCRIPTION": "失去2点 敏捷 。 NL 获得 !M! 点 力量 。"
   },
   "mi_ritual": {
     "NAME": "仪式",
@@ -89,11 +89,11 @@
   },
   "mi_essence_retrive": {
     "NAME": "精华回环",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 每当你使用 *攻击 牌时，恢复 *1 点生命。 NL  消耗 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 只要目标还存活，每当你使用 *攻击 牌时，就恢复 *1 点生命。 NL  消耗 。"
   },
   "mi_pocket_essence": {
     "NAME": "袋装精华",
-    "DESCRIPTION": "抽 !M! 张牌 ，回复1点生命。 NL 每次使用这张牌后，使其在本场战斗内的耗能减少1 [E] 。"
+    "DESCRIPTION": "抽 !M! 张牌 ，如果你的生命值低于50%，还会回复1点生命。 NL 每次使用这张牌后，使其在本场战斗内的耗能减少1 [E] 。"
   },
   "mi_delusion": {
     "NAME": "幻觉",
@@ -158,5 +158,20 @@
   "mi_longrange_strike": {
     "NAME": "长距扫击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标的意图不是 *攻击 ，则在下个回合开始时获得 !B! 点 格挡 。"
+  },
+  "mi_sweeping": {
+    "NAME": "长链横扫",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每个被击中的敌人都会提供 *1 层 mikanmod:幽魂能量 。"
+  },
+  "mi_shadow_amulet": {
+    "NAME": "暗影护符",
+    "DESCRIPTION": " 不能被打出 。 NL 获得 !M! 层 mikanmod:幽魂能量 和 !B! 点 格挡 。 NL 当你抽到这张牌时，会自动触发该效果并将其洗入弃牌堆。",
+    "EXTENDED_DESCRIPTION":[
+      "我 #r不能 打出这张牌!"
+    ]
+  },
+  "mi_pontiff_eye": {
+    "NAME": "教宗之眼",
+    "DESCRIPTION": "消耗5层 mikanmod:幽魂能量 。 NL 造成 !D! 点伤害。 NL 每打出一次，这张牌在本局游戏内的伤害永久提高 * !M! 点 。 NL 消耗 "
   }
 }

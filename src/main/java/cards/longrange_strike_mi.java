@@ -19,7 +19,7 @@ public class longrange_strike_mi extends CustomCard{
     private static final CardColor COLOR = EXAMPLE_GREEN;
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_ghosty_strike.png";
+    private static final String IMG_PATH = "mikanresources/images/cards_img/mi_longrange_strike.png";
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
@@ -33,7 +33,7 @@ public class longrange_strike_mi extends CustomCard{
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public longrange_strike_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.tags.add(CardTags.STRIKE);
+        //this.tags.add(CardTags.STRIKE);
         this.damage=this.baseDamage= ATTACK_DMG;
         this.block=this.baseBlock=BLOCK_AMOUT;
     }

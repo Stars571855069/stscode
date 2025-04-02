@@ -58,9 +58,14 @@ public class reaver_action extends AbstractGameAction {
         if (this.target != null && this.target.hasPower("Thorns")) {
             int Thorns_amount=this.target.getPower("Thorns").amount;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.sourceplayer,this.sourceplayer,new ThornsPower(this.sourceplayer,Thorns_amount)));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target,this.target,"Plated Armor"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target,this.target,"Thorns"));
         }
 
+        if (this.target != null && this.target.hasPower("Intangible")) {
+            int Intangible_amount=this.target.getPower("Intangible").amount;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.sourceplayer,this.sourceplayer,new IntangiblePlayerPower(this.sourceplayer,Intangible_amount)));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target,this.target,"Intangible"));
+        }
         //if (this.target != null && this.target.hasPower("Malleable")) {
         //    int Malleable_amount=this.target.getPower("Malleable").amount;
         //    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.sourceplayer,this.sourceplayer,new MalleablePower(this.sourceplayer,Malleable_amount)));
