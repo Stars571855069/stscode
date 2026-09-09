@@ -60,22 +60,22 @@ public class ghost_vessel_power extends AbstractPower {
     private void updateExistingReapers() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c instanceof reaper_mi) {
-                c.baseDamage = 4 + 3 * this.amount;
+                c.baseDamage = 3 + 3 * this.amount;
             }
         }
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c instanceof reaper_mi) {
-                c.baseDamage = 4 + 3 * this.amount;
+                c.baseDamage = 3 + 3 * this.amount;
             }
         }
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c instanceof reaper_mi) {
-                c.baseDamage = 4 + 3 * this.amount;
+                c.baseDamage = 3 + 3 * this.amount;
             }
         }
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c instanceof reaper_mi) {
-                c.baseDamage = 4 + 3 * this.amount;
+                c.baseDamage = 3 + 3 * this.amount;
             }
         }
     }
@@ -83,7 +83,7 @@ public class ghost_vessel_power extends AbstractPower {
     public void onDrawOrDiscard() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c instanceof reaper_mi) {
-                c.baseDamage = 4 + 3 * this.amount;
+                c.baseDamage = 3 + 3 * this.amount;
             }
         }
     }

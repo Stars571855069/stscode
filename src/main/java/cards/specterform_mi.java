@@ -34,18 +34,14 @@ public class specterform_mi extends CustomCard
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 3;
     private static final int UPGRADE_COST = 2;
-    private static final int INTANGIBLE_AMOUNT = 2;
+    private static final int INTANGIBLE_AMOUNT = 1;
     //=================================================
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public specterform_mi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        //添加基础防御标签和将格挡设为5
-        //this.tags.add(BaseModCardTags.BASIC_DEFEND);
-        //this.baseBlock = BLOCK_AMT;
-        this.baseMagicNumber = INTANGIBLE_AMOUNT;
+        this.magicNumber=this.baseMagicNumber = INTANGIBLE_AMOUNT;
         this.exhaust = true;
-        //this.block=this.baseBlock;
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

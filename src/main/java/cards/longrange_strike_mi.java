@@ -2,6 +2,8 @@ package cards;
 
 import actions.longrange_strike_action;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -51,7 +53,8 @@ public class longrange_strike_mi extends CustomCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new longrange_strike_action(p,m,new DamageInfo(p,this.damage,DamageInfo.DamageType.NORMAL),this.block));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,new DamageInfo(p,this.damage, DamageInfo.DamageType.NORMAL),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        AbstractDungeon.actionManager.addToBottom(new longrange_strike_action(p,m,this.block));
     }
 
 

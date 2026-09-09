@@ -28,10 +28,10 @@ public class ghosty_strike_mi extends CustomCard{
     private static final String IMG_PATH = "mikanresources/images/cards_img/mi_ghosty_strike.png";
     private static final int COST = 1;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int GHOST_VESSEL_CONSUME_AMOUNT = 1;
-    private static final int ATTACK_DMG = 13;
+    private static final int ATTACK_DMG = 11;
     private static final int ATTACK_UPGRADE_DMG = 4;
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)

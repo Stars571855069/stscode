@@ -30,7 +30,7 @@
   },
   "mi_innerpower": {
     "NAME": "内在潜能",
-    "DESCRIPTION": "每回合抽到的第1张耗能大于0的牌在本回合内的耗能降低 *1 点。"
+    "DESCRIPTION": "每回合抽到的第1张耗能大于0的牌在本回合内的耗能 [E] 降低 *1 点。"
   },
   "mi_press_the_attack": {
     "NAME": "强攻",
@@ -43,7 +43,7 @@
   },
   "mi_specterform": {
     "NAME": "化形",
-    "DESCRIPTION": "失去 *2 点 敏捷 。 NL 获得 *1 层 人工制品 。 NL 获得 *2 层 无实体。 NL  消耗 。"
+    "DESCRIPTION": "失去 *2 点 敏捷 。 NL 获得 *1 层 人工制品 。 NL 获得 !M! 层 无实体。 NL  消耗 。"
   },
   "mi_crossfire": {
     "NAME": "正面交火",
@@ -59,11 +59,11 @@
   },
   "mi_shatter_form": {
     "NAME": "分离",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将下一次受到的伤害反馈给攻击者。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下次受到攻击时，对攻击者造成等同于其意图伤害数值的伤害。"
   },
   "mi_power_exchange": {
     "NAME": "再循环",
-    "DESCRIPTION": "失去2点 敏捷 。 NL 获得 !M! 点 力量 。"
+    "DESCRIPTION": "失去1点 敏捷 。 NL 获得 !M! 点 力量 。"
   },
   "mi_ritual": {
     "NAME": "仪式",
@@ -101,8 +101,8 @@
   },
   "mi_rearming": {
     "NAME": "再装填",
-    "DESCRIPTION": "消耗2层 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": "消耗2层 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] [E] [E] 。",
+    "DESCRIPTION": "消耗2层 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "消耗2层 mikanmod:幽魂能量 。 NL 抽1张牌。 NL 获得 [E] [E] 。",
     "EXTENDED_DESCRIPTION":[
       "我没有足够的 #r幽魂能量 可以消耗！"
     ]
@@ -173,5 +173,9 @@
   "mi_pontiff_eye": {
     "NAME": "教宗之眼",
     "DESCRIPTION": "消耗5层 mikanmod:幽魂能量 。 NL 造成 !D! 点伤害。 NL 每打出一次，这张牌在本局游戏内的伤害永久提高 * !M! 点 。 NL 消耗 "
+  },
+  "mi_ghost_defend": {
+    "NAME": "幽魂护卫",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 mikanmod:幽魂能量 。"
   }
 }

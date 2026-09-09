@@ -17,17 +17,18 @@ public class longrange_strike_action extends AbstractGameAction {
     private AbstractMonster targetMonster;
     private AbstractPlayer p;
 
-    public longrange_strike_action(AbstractPlayer p,AbstractMonster target, DamageInfo info, int block_amt) {
+    public longrange_strike_action(AbstractPlayer p,AbstractMonster target, int block_amt) {
         this.targetMonster=target;
         this.p=p;
-        this.info = info;
+        //this.info = info;
         this.amount=block_amt;
+        //this.info.
     }
 
     @Override
     public void update() {
         //System.out.print("敌人意图" + this.targetMonster.getIntentBaseDmg());
-        this.targetMonster.damage(this.info);
+        //this.targetMonster.damage(this.info);
         if (this.targetMonster != null && this.targetMonster.getIntentBaseDmg() <= 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.p,this.p,new NextTurnBlockPower(this.p,this.amount),this.amount));
         }

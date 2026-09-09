@@ -82,14 +82,17 @@ public class mikan extends CustomPlayer{
     // 初始卡组的ID，可直接写或引用变量
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for(int x = 0; x<5; x++) {
+        for(int x = 0; x<4; x++) {
             retVal.add("mi_strike");
         }
          for(int x = 0; x<4; x++) {
              retVal.add("mi_defend");
         }
         for(int x = 0; x<1; x++) {
-            retVal.add("mi_hammerstrike");
+            retVal.add("mi_ghost_defend");
+        }
+        for(int x = 0; x<1; x++) {
+            retVal.add("mi_ghosty_strike");
         }
         return retVal;
     }
@@ -105,8 +108,8 @@ public class mikan extends CustomPlayer{
         return new CharSelectInfo(
                 characterStrings.NAMES[0], // 人物名字
                 characterStrings.TEXT[0], // 人物介绍
-                75, // 当前血量
-                75, // 最大血量
+                70, // 当前血量
+                70, // 最大血量
                 0, // 初始充能球栏位
                 99, // 初始携带金币
                 5, // 每回合抽牌数量
